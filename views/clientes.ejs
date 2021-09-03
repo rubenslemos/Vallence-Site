@@ -1,0 +1,29 @@
+<section class="sessao-clientes" id="clientes">
+    <div class="clientes-wrapper">
+        <form action="/add2" method="POST" id="cliente">
+            <h1>Cadastro de Clientes</h1>
+            <div class="inputs">
+                <input type="text" placeholder="Nome:" name="nome" required>
+                <p class="email">
+                    <input class="email" type="email" placeholder="E-mail:" name="email" required>
+                    <input class="interna2" type="text" placeholder="CPF:" name="cpf" required></p>
+                <p class="interna">
+                    <input class="interna" type="text" placeholder="Telefone:" name="telefone" required>
+                    <input class="interna" type="text" placeholder="Nascimento:" name="nascimento" required onfocus="(this.type='date')">
+                    <input class="interna2" type="text" placeholder="Sexo:" name="sexo" required>
+                </p>
+                <input type="text" placeholder="Endereço:" name="endereco" required>
+                <p class="interna">
+                    <input class="interna" type="text" placeholder="Cidade:" name="cidade" required>
+                    <input class="interna" type="text" placeholder="Estado:" name="estado" required>
+                    <input class="interna2" type="text" placeholder="CEP:" name="cep" required></p>
+            </div>
+        </form>
+        <div class="button">
+            <p class="button">
+                <button class="btn button" type="submit" id="salvarContato" form="cliente">Salvar</button>
+                <a href="/listaclientes"><button class="btn button">Listar Clientes</button></a>
+            </p>
+        </div>
+    </div>
+</section>

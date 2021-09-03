@@ -1,0 +1,58 @@
+<section class="sessao-listaorcamento" id="listaorcamento">
+    <div class="listaorcamento-wrapper">
+        <% readorca.forEach( readorca => {%>
+            <div class="listaorcamento border">
+                <p class="etiqueta">
+                    Produto:</p>
+                <p class="conteudo">
+                    <%= readorca.peca %>
+                </p>
+                <p class="etiqueta">
+                    Compra R$:</p>
+                <p class="conteudo">
+                    <%= readorca.compras %> ,00
+                </p>
+                <p class="etiqueta">
+                    Quantidade:</p>
+                <p class="conteudo">
+                    <%= readorca.quantidade %>
+                </p>
+                <p class="etiqueta">
+                    lucro :</p>
+                <p class="conteudo">
+                    <%= readorca.lucro %> %
+                </p>
+                <p class="etiqueta">
+                    Venda R$:</p>
+                <p class="conteudo">
+                    <%= readorca.venda %> ,00
+                </p>
+                <p class="etiqueta">
+                    Mão de obra R$:</p>
+                <p class="conteudo">
+                    <%= readorca.maodeobra %> ,00
+                </p>
+                <p class="etiqueta">
+                    Serviço:</p>
+                <p class="conteudo">
+                    <%= readorca.servicos%>
+                        <div class="buttonorc">
+                            <p class="buttonorcamento">
+                                <a href="editarOrcamento/<%= readorca.id%>"><button class="btn buttonorc">Editar</button></a>
+                            </p>
+                        </div>
+                        <div class="buttonorc">
+                            <p class="buttonorcamento">
+                                <a href="/listaorcamento/<%= readorca.id%>"><button class="btn buttonorc">Excluir</button></a>
+                            </p>
+                        </div>
+                        <% } )%>
+                            <div class="buttonusuario">
+                                <p class="buttonorcamentos">
+                                    <a href="/orcamento"><button class="btn buttonuser">Voltar</button></a>
+                                </p>
+                            </div>
+                </p>
+            </div>
+    </div>
+</section>

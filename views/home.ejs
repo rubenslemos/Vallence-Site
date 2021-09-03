@@ -1,0 +1,41 @@
+<header>
+    <div class="img-wrapper">
+        <img src="/img/fundo.jpg" alt="background">
+    </div>
+    <div class="banner">
+        <img src="/img/rumos.png" alt="Rumos Soluções em TI">
+        <h1>Rubens Silva Lemos</h1>
+        <p>Developer & Técnico de PCs</p>
+    </div>
+    <% if (user == null) { %>
+        <div class="login3">
+            <form action="/logar" method="POST" id="orcamentos" name="orcamentos">
+                <h1 class="tituloLogin">Login</h1>
+                <% if (error_msg) {%>
+                    <p class="error_msg">
+                        <%= error_msg %>
+                    </p>
+                    <% } %>
+                        <div class="login">
+                            <p class="login">
+                                <small class="logins">Usuário</small>
+                                <input class="logins" type="email" name="email" required>
+                            </p>
+                            <p class="login">
+                                <small class="logins">Senha</small>
+                                <input class="logins" type="password" name="Senha" required>
+                            </p>
+                        </div>
+            </form>
+            <div class="modallogin">
+                <p>
+                    <button class="btn loginbtn" type="submit" form="orcamentos">Entrar</button>
+                </p>
+                <p>
+                    <a href="/"><button class="btn loginbtn">Cancelar</button></a>
+                </p>
+            </div>
+        </div>
+        <% } else {%>
+            <% } %>
+</header>

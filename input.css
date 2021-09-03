@@ -1,0 +1,501 @@
+<div class="sessao-header"><h1>Projetos</h1></div><div class="projetos"><div class="card"><div class="card-img-wrapper"><img src="/img/proj1.jpg" alt="Imagem Projeto To Do"></div><div class="card-info"><h2>ToDo list</h2><h3>Javascript</h3><p>Lorem ipsum,
+dolor sit amet consectetur adipisicing elit. Quod recusandae a quas molestiae consequatur veritatis? Eius et rerum laboriosam accusamus,
+necessitatibus facere ullam quas sit laborum consequuntur est. Accusantium,
+praesentium?</p><button>Saiba Mais</button></div></div><div class="card"><div class="card-img-wrapper"><img src="/img/proj2.jpg" alt="imagem projeto maratona"></div><div class="card-info"><h2>Maratona</h2><h3>HTML,
+CSS</h3><p>Lorem ipsum,
+dolor sit amet consectetur adipisicing elit. Quod recusandae a quas molestiae consequatur veritatis? Eius et rerum laboriosam accusamus,
+necessitatibus facere ullam quas sit laborum consequuntur est. Accusantium,
+praesentium?.</p><button>Saiba Mais</button></div></div><div class="card"><div class="card-img-wrapper"><img src="/img/proj3.jpg" alt="Imagem do projeto A fazer"></div><div class="card-info"><h2>Orçamento</h2><h3>HTML,
+CSS,
+Javascript</h3><p>Lorem ipsum,
+dolor sit amet consectetur adipisicing elit. Quod recusandae a quas molestiae consequatur veritatis? Eius et rerum laboriosam accusamus,
+necessitatibus facere ullam quas sit laborum consequuntur est. Accusantium,
+praesentium?</p><button>Saiba Mais</button></div></div></div>.sessao-projetos {
+    height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 20rem;
+    height: 35rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 68);
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .4;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .2;
+}
+
+.card-info {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: .1rem 0.1rem 0.1rem rgba(0, 0, 0, .8);
+    transition: all 1s;
+}
+
+.card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #e6e6e9;
+}
+
+.card-info h3 {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f0d9d9;
+    text-shadow: .1rem 0.1rem 0.1rem rgba(0, 0, 0, 81);
+    text-shadow: 0rem 0.1rem 0.1rem rgba(0, 0, 0, .3);
+    margin-bottom: 2rem;
+}
+
+.card-info button {
+    font-family: var(--font-action);
+    font-size: 1.1rem;
+    color: #3e3e99;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    text-shadow: .05rem .05rem rgba(0, 0, 0, .8);
+    width: 8.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info button:hover {
+    color: rgb(211, 211, 211);
+    cursor: pointer;
+    transition: .7s;
+    opacity: .8;
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sessao-projetos {
+    height: 100vh;
+    background-color: var(--cor-fundo);
+}
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 20rem;
+    height: 35rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 68, 68);
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .4;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .2;
+}
+
+.card-info {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: .1rem 0.1rem 0.1rem rgba(0, 0, 0, .8);
+    transition: all 1s;
+}
+
+.card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #e6e6e9;
+}
+
+.card-info h3 {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f0d9d9;
+    text-shadow: .1rem 0.1rem 0.1rem rgba(0, 0, 0, 81);
+    text-shadow: 0rem 0.1rem 0.1rem rgba(0, 0, 0, .3);
+    margin-bottom: 2rem;
+}
+
+.card-info button {
+    font-family: var(--font-action);
+    font-size: 1.1rem;
+    color: #3e3e99;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    text-shadow: .05rem .05rem rgba(0, 0, 0, .8);
+    width: 8.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info button:hover {
+    color: rgb(211, 211, 211);
+    cursor: pointer;
+    transition: .7s;
+    opacity: .8;
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* The contain */
+
+.contain {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.contain input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(65, 59, 59, .95);
+    box-shadow: 0rem 0rem 0.3rem rgb(0, 0, 0);
+    border-radius: .4rem;
+}
+
+
+/* Passando o mouse encima muda a borda */
+
+.contain:hover input~.checkmark {
+    border: solid 1px black;
+    box-shadow: none;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.contain input:checked~.checkmark {
+    background-color: var(--azul-Rumos);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.contain input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.contain .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.containe {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    align-items: center;
+    justify-content: left;
+}
+
+
+/* Hide the browser's default radio button */
+
+.containe input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkmar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1rem;
+    width: 1rem;
+    margin-top: .3rem;
+    background-color: rgba(65, 59, 59, .95);
+    box-shadow: 0rem 0rem 0.3rem rgb(0, 0, 0);
+    border-radius: 1rem;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.containe:hover input~.checkmar {
+    border: solid 1px black;
+    box-shadow: none;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.containe input:checked~.checkmar {
+    background-color: var(--azul-Rumos);
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmar:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.containe input:checked~.checkmar:after {
+    display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.containe .checkmar:after {
+    top: .3rem;
+    left: .3rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+}
+
+.slidecontainer {
+    width: 17rem;
+    grid-column: 2;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: .4rem;
+    background-color: rgba(65, 59, 59, .95);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: .8rem;
+    box-shadow: .05rem .05rem .1rem black;
+}
+
+.slider:hover {
+    opacity: 1;
+    box-shadow: none;
+    border: solid .08rem black;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: #1e5677;
+    cursor: pointer;
+    border-radius: .8rem;
+}
+
+.slider::-moz-range-thumb {
+    width: 1rem;
+    height: 1rem;
+    background: #1e5677;
+    cursor: pointer;
+    border-radius: .8rem;
+}
+
+.sessao-clientes {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-clientes div {
+    grid-column: 2;
+    margin-left: 2rem;
+    width: 55%;
+}
+
+.clientes-wrapper {
+    width: 60%;
+    height: 80%;
+    background-color: rgba(65, 59, 59, .95);
+    box-shadow: .05rem .05rem 2rem rgba(0, 0, 0, .8);
+    text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    position: relative;
+    color: var(--blue-Rumos);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sessao-clientes h1 {
+    position: absolute;
+    top: 0rem;
+    color: var(--blue-Rumos);
+    right: .05rem;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+    grid-column: 2;
+    /* border: solid 1px; */
+    width: 80%;
+}
+
+.sessao-clientes img {
+    width: 19rem;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+    /* margin-right: 3rem; */
+}
+
+.sessao-clientes form {
+    margin-top: 3rem;
+    /* margin-left: 2rem; */
+    display: flex;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-clientes p {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    color: var(--blue-Rumos);
+}
+
+.sessao-clientes input {
+    margin-bottom: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    color: var(--blue-Rumos);
+    text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+    background-color: rgba(65, 59, 59, .95);
+    border-bottom: 1px solid var(--blue-Rumos);
+    width: 30rem;
+    outline: none;
+    margin-top: .5rem;
+}

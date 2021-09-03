@@ -1,0 +1,12 @@
+const express = require('express')
+const route = express.Router()
+const insert = require('./Insert')
+const deletar = require('./delete')
+const read = require('./read')
+route.post('/add2', (insert.orcamento))
+route.post('/add', (insert.usuarios))
+route.get('/post', read.readpost)
+route.get('/usercad', read.readuser)
+route.get('/delete/:id', deletar.deletepost)
+route.get('/delete/:id', deletar.deleteuser)
+module.exports = route

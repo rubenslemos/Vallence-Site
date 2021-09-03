@@ -1,0 +1,74 @@
+<section class="sessao-listaclientes" id="listaclientes">
+    <div class="listaclientes-wrapper listaclientes">
+        <% readuser.forEach( readuser => {%>
+            <div class="listaclientes border">
+                <input type="hidden" placeholder="id" name="id" id="id" value="<%= readuser.id %>">
+                <p class="etiquetauser">
+                    Nome</p>
+                <p class="conteudouser">
+                    <%= readuser.nome %>
+                </p>
+                <p class="etiquetauser mail">
+                    E-mail</p>
+                <p class="conteudouser mail">
+                    <%= readuser.email %>
+                </p>
+                <p class="cpf etiquetauser">
+                    CPF</p>
+                <p class="conteudouser cpf">
+                    <%= readuser.cpf %>
+                </p>
+                <p class="etiquetauser">
+                    Telefone</p>
+                <p class="conteudouser">
+                    <%= readuser.telefone %>
+                </p>
+                <p class="etiquetauser">
+                    Nascido em</p>
+                <p class="conteudouser">
+                    <%= moment(readuser.nascimento).format('DD/MM/YYYY') %>
+                </p>
+                <p class="etiquetauser">
+                    Sexo</p>
+                <p class="conteudouser">
+                    <%= readuser.sexo %>
+                </p>
+                <p class="etiquetauser">
+                    Endereço</p>
+                <p class="conteudouser">
+                    <%= readuser.endereco %>
+                </p>
+                <p class="etiquetauser">
+                    Cidade</p>
+                <p class="conteudouser">
+                    <%= readuser.cidade %>
+                </p>
+                <p class="etiquetauser">
+                    Estado</p>
+                <p class="conteudouser">
+                    <%= readuser.estado %>
+                </p>
+                <p class="etiquetauser">
+                    CEP</p>
+                <p class="conteudouser">
+                    <%= readuser.cep %>
+                </p>
+                <div class="buttonuser">
+                    <p class="buttonousuario">
+                        <a href="/editarCliente/<%= readuser.id%>"><button class="btn buttonuser">Editar</button></a>
+                    </p>
+                </div>
+                <div class="buttonuser">
+                    <p class="buttonusuario">
+                        <a class="buttonuser" href="/listaclientes/<%= readuser.id%>"><button class="btn buttonuser">Excluir</button></a>
+                    </p>
+                </div>
+            </div>
+            <% } )%>
+                <div class="buttonusuario">
+                    <p class="buttonusuarios">
+                        <a href="/clientes"><button class="btn buttonuser">Voltar</button></a>
+                    </p>
+                </div>
+    </div>
+</section>

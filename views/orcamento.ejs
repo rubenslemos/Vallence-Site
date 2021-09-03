@@ -1,0 +1,28 @@
+<section class="sessao-orcamento" id="orcamento">
+    <div class="orcamento-wrapper">
+        <form action="/add" method="POST" id="orcamentos">
+            <h1>Orçamentos</h1>
+            <div class="orcainput">
+                <input type="text" placeholder="Peça:" name="peca" class="orcamento4">
+                <p class="orcamento">
+                    <input class="orcamento" type="text" placeholder="Compra $:" name="compras">
+                    <input class="orcamento" type="text" placeholder="Quantidade:" name="quantidade">
+                    <input class="orcamento" type="text" placeholder="Lucro(%):" name="lucro">
+                    <input class="orcamento" type="text" placeholder="Venda $:" name="venda">
+                </p>
+                <p class="orcamento">
+                    <input class="orcamento1" type="text" placeholder="Mão de Obra:" name="maodeobra">
+                    <input class="orcamento2" type="text" placeholder="Serviços:" name="servicos">
+                </p>
+            </div>
+        </form>
+        <div>
+            <div class="orcabtn">
+                <p class="orcamento2">
+                    <button class="btn" type="submit" form="orcamentos">Gravar</button>
+                    <a href="/listaorcamento"><button class="btn">Listar</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

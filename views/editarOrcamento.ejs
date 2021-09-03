@@ -1,0 +1,40 @@
+<section class="sessao-editarOrcamento">
+    <div class="bgmodal" id="modal">
+        <div class="modal">
+            <form action="/editarOrcamento" method="POST" id="orcamentos" name="orcamentos">
+                <h1 class="titulo">Orçamentos</h1>
+                <div class="orcainput">
+                    <input type="hidden" placeholder="id" name="id" id="id" value="<%= exibirOrcamento.id %>">
+                    <p class="orcamento">
+                        <small class="orcamentoEdit">Peça</small>
+                        <input type="text" placeholder="Peça:" name="peca" value="<%= exibirOrcamento.peca %>">
+                    </p>
+                    <p class="orcamento">
+                        <small class="orcamentoEdit">Preço de compra</small>
+                        <input class="orcamento" type="text" placeholder="Compra $:" name="compras" value="<%= exibirOrcamento.compras %>">
+                        <small class="orcamentoEdit">Quantidade</small>
+                        <input class="orcamento" type="text" placeholder="Quantidade:" name="quantidade" value="<%= exibirOrcamento.quantidade %>">
+                        <small class="orcamentoEdit">Lucro %</small>
+                        <input class="orcamento" type="text" placeholder="Lucro(%):" name="lucro" value="<%= exibirOrcamento.lucro %>">
+                        <small class="orcamentoEdit">Preço de Venda</small>
+                        <input class="orcamento" type="text" placeholder="Venda $:" name="venda" value="<%= exibirOrcamento.venda %>">
+                    </p>
+                    <p class="orcamento">
+                        <small class="orcamentoEdit">Mão de Obra</small>
+                        <input class="orcamento3" type="text" placeholder="Mão de Obra:" name="maodeobra" value="<%= exibirOrcamento.maodeobra %>">
+                        <small class="orcamentoEdit">Serviço</small>
+                        <input class="orcamento2" type="text" placeholder="Serviços:" name="servicos" value="<%= exibirOrcamento.servicos%>">
+                    </p>
+                </div>
+            </form>
+            <div class="modaldisplay">
+                <p>
+                    <button class="btn modalbtn" type="submit" form="orcamentos">Salvar</button>
+                </p>
+                <p>
+                    <a href="/listaorcamento"><button class="btn modalbtn">Cancelar</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

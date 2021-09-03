@@ -1,0 +1,46 @@
+<section class="sessao-editarOrcamento">
+    <div class="bgmodal" id="modal">
+        <div class="cadastrar">
+            <form action="/cadastrar" method="POST" id="Cadastrar" name="Cadastrar">
+                <h1 class="titulo">Cadastro de Usuários</h1>
+                <div class="cadastro">
+                    <p class="cadastro">
+                        <small class="login">Usuário</small>
+                        <input class="login" type="text" name="usuario" required>
+                        <small class="login2">E-mail</small>
+                        <input class="login2" type="email" name="email" required>
+                    </p>
+                    <p class="cadastro">
+                        <small class="login">Senha</small>
+                        <input class="login" type="password" name="Senha" required>
+                        <small class="login2">Confirmar Senha</small>
+                        <input class="login2" type="password" name="confirmar" required>
+                    </p>
+                </div>
+            </form>
+            <div class="modalcadastro">
+                <p>
+                    <button class="btn cadastrobtn" type="submit" form="Cadastrar">Cadastrar</button>
+                </p>
+                <p>
+                    <a href="/login"><button class="btn cadastrobtn">Cancelar</button></a>
+                </p>
+            </div>
+            <% if (error_msg) {%>
+                <p class="error_msg">
+                    <%= error_msg %>
+                </p>
+                <% } %>
+                    <% if (erros) {%>
+                        <p class="error_msg">
+                            <%= erros %>
+                        </p>
+                        <% } %>
+                            <% if (success_msg) {%>
+                                <p class="success_msg">
+                                    <%= success_msg %>
+                                </p>
+                                <% } %>
+        </div>
+    </div>
+</section>

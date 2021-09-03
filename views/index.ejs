@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/stlyle.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/72b6778518.js" crossorigin="anonymous"></script>
+    <title>Rumos Soluções em T.I.</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="hamburger">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </div>
+        <aside class="sidebar">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="/" class="menu-link"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="menu-item"><a href="/cadastrologin" class="menu-link"><i class="fas fa-id-card"></i> Cadastro Usuarios</a></li>
+                    <li class="menu-item"><a href="/clientes" class="menu-link"><i class="fas fa-address-book"></i> Clientes</a></li>
+                    <li class="menu-item"><a href="/orcamento" class="menu-link"><i class="fas fa-wallet"></i> Orçamento</a></li>
+                    <li class="menu-item"><a href="/conhecimento" class="menu-link"><i class="fas fa-book"></i> Conhecimento</a></li>
+                    <li class="menu-item"><a href="/contato" class="menu-link"><i class="fas fa-envelope-open"></i> Contato</a></li>
+                    <% if (user == null) { %>
+                        <% } else {%>
+                            <li class="menu-item"><a href="/logout" class="menu-link"><i class="fas fa-sign-in-alt"></i> LogOut</a></li>
+                            <% } %>
+                </ul>
+            </nav>
+        </aside>
+        <% if (success_msg) {%>
+            <p class="success_msg">
+                <%= success_msg %>
+            </p>
+            <% } %>
+                <%-include(`${page}`)%>
+                    <footer>
+                        <div class="footer-content">
+                            <% if (user == null) { %>
+                                <p></p>
+                                <% } else {%>
+                                    <p class="logado">
+                                        <%= user.usuario %> :
+                                            <%= user.email %>
+                                    </p>
+                                    <% } %>
+                                        <p>
+                                            Copyright &copy; 2021, Rumos Soluções em TI Todos direitos reservados
+                                        </p>
+                                        <div class="social-list">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                            </ul>
+                                        </div>
+                        </div>
+                    </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+
+</html>

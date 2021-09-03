@@ -1,0 +1,46 @@
+<section class="sessao-editclientes">
+    <div class="bgmodal" id="modal">
+        <div class="modaluser">
+            <form action="/editarCliente" method="POST" id="clientes" name="clientes">
+                <h1 class="titulo">Cliente</h1>
+                <div class="userinput">
+                    <input type="hidden" placeholder="id" name="id" id="id" value="<%= exibirCliente.id %>">
+                    <small>Nome</small>
+                    <input type="text" placeholder="Nome:" name="nome" value="<%= exibirCliente.nome %>">
+                    <p class="email">
+                        <small class="email">E-mail</small>
+                        <input class="email" type="email" placeholder="E-mail:" name="email" value="<%= exibirCliente.email %>">
+                        <small class="interna2">CPF</small>
+                        <input class="interna2" type="text" placeholder="CPF:" name="cpf" value="<%= exibirCliente.cpf %>">
+                    </p>
+                    <p class="interna">
+                        <small>Telefone</small>
+                        <input class="interna" type="text" placeholder="Telefone:" name="telefone" value="<%= exibirCliente.telefone %>">
+                        <small>Nascido em</small>
+                        <input class="interna" type="text" placeholder="Nascimento:" name="nascimento" value="<%= moment(exibirCliente.nascimento).format('DD/MM/YYYY') %>" onfocus="(this.type='date')">
+                        <small>Sexo</small>
+                        <input class="interna2" type="text" placeholder="Sexo:" name="sexo" value="<%= exibirCliente.sexo %>">
+                    </p>
+                    <small>Endereço</small>
+                    <input type="text" placeholder="Endereço:" name="endereco" value="<%= exibirCliente.endereco %>">
+                    <p class="interna">
+                        <small>Cidade</small>
+                        <input class="interna" type="text" placeholder="Cidade:" name="cidade" value="<%= exibirCliente.cidade %>">
+                        <small>Estado</small>
+                        <input class="interna" type="text" placeholder="Estado:" name="estado" value="<%= exibirCliente.estado %>">
+                        <small>CEP</small>
+                        <input class="interna2" type="text" placeholder="CEP:" name="cep" value="<%= exibirCliente.cep %>">
+                    </p>
+                </div>
+            </form>
+            <div class="modaldisplay">
+                <p>
+                    <button class="btn modalbtn" type="submit" form="clientes">Salvar</button>
+                </p>
+                <p>
+                    <a href="/listaclientes"><button class="btn modalbtn">Cancelar</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
