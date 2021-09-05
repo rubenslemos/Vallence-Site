@@ -1,30 +1,30 @@
 <section class="sessao-contato" id="contato">
     <div class="contato-wrapper">
-        <div class="contato-left"></div>
         <div class="contato-right">
             <h1>Contato</h1>
-            <form action="#">
-                <div class="input-group">
-                    <input type="text" class="field" id="nome">
+            <form name="form" id="form" onsubmit="return false">
+                <div class="input-group ">
+                    <input type="text" class="field" name="nome" id="nome">
                     <label for="nome" class="field-label">
                         Nome
                     </label>
                 </div>
                 <div class="input-group">
-                    <input type="text" class="field" id="email">
+                    <input type="text" class="field" name="email" id="email">
                     <label for="email" class="field-label">
                         E-Mail
                     </label>
                 </div>
                 <div class="input-group">
-                    <textarea class="field" id="mensagem">
+                    <textarea class="field" nome="mensagem" id="mensagem">
 
                     </textarea>
                     <label for="mensagem" class="field-label">
                         Mensagem
                     </label>
                 </div>
-                <button type="submit" class="btn-subimit">Enviar</button>
+                <button type="submit" class="btn" nome="button" id="button">Enviar</button>
+                <div><img class="imgConhecimento" src="/img/conhecimentos.png"></div>
             </form>
         </div>
     </div>

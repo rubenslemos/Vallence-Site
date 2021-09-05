@@ -7,6 +7,7 @@ const create = require('./CreateTables')
 const edit = require('./edit')
 const login = require('./login')
 const eAdmin = require('./eAdmin')
+
 route.get('/', (req, res) => res.render("index", { page: 'home' }))
 route.get('/conhecimento', (req, res) => res.render("index", { page: 'conhecimento' }))
 route.get('/clientes', eAdmin.logado, (req, res) => res.render("index", { page: 'clientes' }))

@@ -23,7 +23,7 @@
         --font-secondary: 'Josefin Slab', serif;
         --font-action: 'Mulish', sans-serif;
         --blue-Rumos: #0083b0;
-        --cor-fundo: #413b3b;
+        --cor-fundo: rgba(238, 238, 238, .3);
         --azul-Rumos: #1e5677;
         --azul-Vallence: rgb(41, 128, 175);
         --verde-Vallence: #6faf5b;
@@ -127,7 +127,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-color: var(--cor-fundo);
+        background-color: #413b3b;
     }
     
     .img-wrapper img {
@@ -162,12 +162,12 @@
     }
     
     .banner h1 {
-        color: #ffffff;
+        color: var(--azul-Vallence);
         font-size: 3.5rem;
         font-family: var(--font-primary);
         line-height: 5rem;
         font-weight: 200;
-        text-shadow: .1rem .1rem 1px rgb(30, 86, 119);
+        text-shadow: 0.1rem 0.1rem 1px darkgrey;
         margin-bottom: 2rem;
         opacity: 0;
         animation: moveBanner 1s .7s forwards;
@@ -177,9 +177,9 @@
         margin-bottom: 2rem;
         font-weight: 600;
         font-family: var(--font-secondary);
-        color: #fff;
+        color: var(--verde-Vallence);
         font-size: 2rem;
-        text-shadow: .1rem .1rem 3px rgb(30, 86, 119);
+        text-shadow: .1rem .1rem 3px darkgrey;
         opacity: 0;
         animation: moveBanner 1s .9s forwards;
     }
@@ -225,7 +225,7 @@
         top: -4rem;
         transition: 1s;
         z-index: 150;
-        text-shadow: 0.1rem 0.1rem 1px black;
+        text-shadow: 0.1rem 0.1rem rgb(0 0 0 / 10%);
     }
     
     .show-menu .sidebar {
@@ -257,7 +257,7 @@
     }
     
     .menu-link:hover {
-        color: #eee;
+        color: var(--azul-Vallence);
     }
     
     .social-media {
@@ -325,22 +325,21 @@
     .sessao-header {
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: center;
     }
     
     .sessao-conhecimentos {
-        background-color: #413b3b;
+        background-color: var(--cor-fundo);
         height: 95vh;
     }
     
     .sessao-header h1 {
         font-family: var(--font-primary);
         font-size: 3.7rem;
-        color: var(--blue-Rumos);
+        color: var(--azul-Vallence);
         margin-bottom: 3rem;
-        text-shadow: 0.05rem 0.05rem 0.5rem rgb(0 0 0 / 80%);
+        text-shadow: 0.05rem 0.05rem 0.5rem rgb(0 0 0 / 30%);
         padding-top: 3rem;
-        margin-left: 6rem;
     }
     
     .conhecimento-header {
@@ -370,9 +369,9 @@
     }
     
     .conhecimentos-img-wrapper {
-        grid-column: 8/11;
+        grid-column: 7/12;
         grid-row: 2/6;
-        width: 87%;
+        width: 70%;
     }
     
     .conhecimentos-img-wrapper img {
@@ -383,14 +382,14 @@
     .sessao-clientes {
         width: 100%;
         height: 95vh;
-        background-color: var(--cor-fundo);
+        background-color: rgba(238, 238, 238, .3%);
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
     .sessao-clientes div {
-        width: 40%;
+        width: 35%;
     }
     
     p.email {
@@ -446,12 +445,12 @@
     .clientes-wrapper {
         width: 60;
         height: 53%;
-        background-color: rgba(65, 59, 59, .95);
+        background-color: rgba(238, 238, 238, .3%);
         box-shadow: .05rem .05rem 2rem rgba(0, 0, 0, .8);
         text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         border-radius: 10px;
         position: relative;
-        color: var(--blue-Rumos);
+        color: var(--azul-Vallence);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -460,13 +459,13 @@
     
     .sessao-clientes h1 {
         position: absolute;
-        top: 0rem;
-        color: var(--blue-Rumos);
+        top: 1rem;
+        color: var(--azul-Vallence);
         font-family: var(--font-primary);
         font-size: 3rem;
-        font-weight: 500;
+        font-weight: 600;
         text-align: center;
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
         width: 100%;
     }
     
@@ -478,7 +477,8 @@
     }
     
      ::placeholder {
-        color: var(--blue-Rumos);
+        color: var(--verde-Vallence);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
     }
     
     .sessao-clientes form {
@@ -502,10 +502,10 @@
         font-family: var(--font-secondary);
         font-size: 1rem;
         font-weight: 600;
-        color: var(--blue-Rumos);
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
-        background-color: rgba(65, 59, 59, .95);
-        border-bottom: 1px solid var(--blue-Rumos);
+        color: var(--verde-Vallence);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
+        background-color: rgba(238, 238, 238, .3);
+        border-bottom: .15rem solid var(--verde-Vallence);
         outline: none;
         width: 36rem;
     }
@@ -520,41 +520,31 @@
     }
     
     .contato-wrapper {
-        width: 30%;
+        width: 20%;
         height: 54%;
         display: flex;
-        box-shadow: 0.5rem 0.5rem 3rem rgb(7 7 7);
+        box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, .3);
         border-radius: 1rem;
     }
     
-    .contato-left {
-        width: 20%;
-        height: 31rem;
-        background: url(/img/contato.png);
-        background-size: 90%;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-left: 1rem;
-    }
-    
     .contato-right {
-        width: 83%;
+        width: 100%;
         background-color: var(--cor-fundo);
         padding: 1rem 3rem 3rem 3rem;
         border-radius: 0rem 1rem 1rem 0rem;
-        color: var(--blue-Rumos);
+        color: var(--azul-Vallence);
         font-weight: 700;
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
     }
     
     .contato-right h1 {
         margin-top: -1rem;
         font-family: var(--font-primary);
         font-size: 3rem;
-        font-weight: 500;
-        color: var(--blue-Rumos);
+        font-weight: 700;
+        color: var(--azul-Vallence);
         text-align: center;
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
     }
     
     .sessao-contato form {
@@ -565,8 +555,16 @@
         flex-direction: column;
     }
     
+    .imgConhecimento {
+        position: relative;
+        bottom: 24rem;
+        opacity: 0.2;
+        z-index: 1;
+    }
+    
     .input-group {
         position: relative;
+        z-index: 2;
     }
     
     .input-group textarea {
@@ -580,53 +578,21 @@
         background: transparent;
         border: none;
         width: 20rem;
-        height: 3rem;
         font-size: 1.5rem;
         font-family: var(--font-secondary);
-        border-bottom: 2px dashed var(--blue-Rumos);
+        border-bottom: 2px solid var(--verde-Vallence);
         outline: none;
-        margin: 2rem 0;
+        margin: 2.5rem 0;
+        color: var(--verde-Vallence);
     }
     
     .field-label {
         position: absolute;
         left: 0;
-        top: 2rem;
+        top: 0rem;
         font-family: var(--font-secondary);
         text-transform: uppercase;
         font-size: 1.2rem;
-        transition: all .3s;
-    }
-    
-    .field:focus~label {
-        top: 0;
-        font-size: 1rem;
-    }
-    
-    .field:focus {
-        border-bottom: 2px solid var(--blue-Rumos);
-    }
-    
-    .btn-subimit {
-        font-family: var(--font-action);
-        font-size: 1.1rem;
-        color: #3e3e99;
-        background: linear-gradient(to right, #00b4db, #0083b0);
-        padding: 1rem 1rem;
-        border-radius: .5rem;
-        width: 8.5rem;
-        text-shadow: .05rem .05rem rgba(0, 0, 0, .8);
-        height: 2.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .btn-subimit:hover {
-        color: rgb(211, 211, 211);
-        cursor: pointer;
-        transition: .7s;
-        opacity: .8;
     }
     
     .sessao-orcamento {
@@ -639,15 +605,14 @@
     }
     
     .sessao-orcamento div {
-        width: 55%;
+        width: 45%;
     }
     
     .orcamento-wrapper {
-        width: 100%;
-        height: 65%;
-        background-color: rgba(65, 59, 59, .95);
+        height: 45%;
+        background-color: rgba(238, 238, 238, .3);
         box-shadow: .05rem .05rem 2rem rgba(0, 0, 0, .8);
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
         border-radius: 10px;
         position: relative;
         color: var(--blue-Rumos);
@@ -660,13 +625,13 @@
     .sessao-orcamento h1 {
         position: absolute;
         top: 0rem;
-        color: var(--blue-Rumos);
+        color: var(--azul-Vallence);
         right: .05rem;
         font-family: var(--font-primary);
         font-size: 3rem;
-        font-weight: 500;
+        font-weight: 600;
         text-align: center;
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        text-shadow: .05rem .05rem .3rem rgba(156, 102, 102, 0.3);
         width: 100%;
     }
     
@@ -676,6 +641,7 @@
         flex-direction: column;
         align-items: baseline;
         text-align: center;
+        margin-left: 3rem;
     }
     
     div.orcabtn {
@@ -711,10 +677,10 @@
     .sessao-orcamento input {
         font-family: var(--font-secondary);
         font-size: 1rem;
-        color: var(--blue-Rumos);
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
-        background-color: rgba(65, 59, 59, .95);
-        border-bottom: 1px solid var(--blue-Rumos);
+        color: var(--verde-Vallence);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .3);
+        background-color: rgba(238, 238, 238, .3);
+        border-bottom: .15rem solid var(--verde-Vallence);
         width: 41rem;
         outline: none;
         margin-top: .5rem;
@@ -722,7 +688,7 @@
     
     p.orcamento {
         display: grid;
-        grid-template-columns: repeat(4, 12.2rem);
+        grid-template-columns: repeat(4, 11.5rem);
         grid-template-rows: repeat(2, 2.5rem);
         padding-left: 0rem;
     }
@@ -736,15 +702,15 @@
     }
     
     input[type="text"].orcamento {
-        width: 11.6rem;
+        width: 10.6rem;
     }
     
     input[type="text"].orcamento3 {
-        width: 10rem;
+        width: 10.6rem;
     }
     
     input[type="text"].orcamento2 {
-        width: 36rem;
+        width: 33.6rem;
         grid-column: 2/4;
     }
     
@@ -788,7 +754,7 @@
         margin-bottom: 2rem;
         margin-left: -2rem;
         background-color: var(--cor-fundo);
-        background: linear-gradient(to top, var(--verde-Vallence), rgb(78, 179, 46));
+        background: linear-gradient(to top, var(--verde-Vallence), rgb(61, 219, 13));
         border-radius: .5rem;
         color: #fff;
         text-shadow: 0.1rem 0.2rem 0.5rem rgb(0 0 0);
@@ -796,14 +762,13 @@
     }
     
     .btn:hover {
-        font-weight: 500;
-        background: linear-gradient(to bottom, var(--verde-Vallence), rgb(78, 179, 46));
+        background: linear-gradient(to bottom, var(--azul-Vallence), var(--azul-Rumos));
     }
     
     footer {
         width: 100%;
         height: 3rem;
-        background-color: #eee;
+        background-color: rgba(238, 238, 238, .3);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -862,10 +827,10 @@
     
     .listaorcamento-wrapper {
         height: 87%;
-        background-color: rgba(65, 59, 59, .95);
-        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
+        background-color: var(--cor-fundo);
+        text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .5);
         position: absolute;
-        color: var(--blue-Rumos);
+        color: var(--azul-Vallence);
         display: flex;
         flex-direction: column;
     }
@@ -938,12 +903,12 @@
         display: grid;
         grid-template-columns: repeat(11, 10.7rem);
         grid-template-rows: repeat(2, 3rem);
-        border-bottom: .1rem solid;
+        border-bottom: .15rem solid var(--verde-Vallence);
     }
     
     .listaclientes-wrapper {
         height: 87%;
-        background-color: rgba(65, 59, 59, .95);
+        background-color: var(--cor-fundo);
         text-shadow: .05rem .05rem .3rem rgba(0, 0, 0, .8);
         position: absolute;
         color: var(--blue-Rumos);
@@ -1019,8 +984,8 @@
         font-family: 'Josefin Slab';
         font-weight: 600;
         font-size: 1.1rem;
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
-        color: dodgerblue;
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
+        color: var(--azul-Vallence);
     }
     
     p.etiquetauser.mail {
@@ -1033,15 +998,16 @@
         width: 21rem;
         grid-row: 2;
         padding-right: 2rem;
-        color: #d4d4f5;
-        border-bottom: .1rem #0083b0 solid;
+        color: var(--verde-Vallence);
+        border-bottom: .15rem var(--verde-Vallence) solid;
     }
     
     p.conteudouser {
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
         margin-left: 1rem;
         width: 11rem;
         grid-row: 2;
-        color: #d4d4f5;
+        color: var(--verde-Vallence);
         text-align: center;
     }
     
@@ -1054,35 +1020,65 @@
     }
     
     h1.titulo {
-        color: var(--blue-Rumos);
+        color: var(--azul-Vallence);
         text-align: center;
         font-weight: 800;
         font-family: var(--font-primary);
         font-size: 3rem;
-        text-shadow: 0.3rem 0.1rem rgb(0 0 0 / 80%);
+        text-shadow: 0.2rem 0.1rem rgb(0 0 0 / 10%);
     }
     
     .bgmodal {
         width: 100%;
         height: 95%;
-        background: rgba(0, 0, 0, 0.75);
+        background: rgba(238, 238, 238, .3%);
         position: fixed;
         display: block;
     }
     
     .modal {
-        width: 50%;
-        height: 60%;
+        width: 45%;
+        height: 50%;
         background-color: var(--cor-fundo);
-        border: .15rem solid rgba(0, 131, 176, .3);
         border-radius: .6rem;
         margin: 8rem auto 0 auto;
         box-shadow: 0.05rem 0.05rem 2rem rgba(0, 0, 0, .8);
     }
     
+    .modalEditar {
+        width: 40%;
+        height: 50%;
+        background-color: var(--cor-fundo);
+        border-radius: .6rem;
+        margin: 8rem auto 0 auto;
+        box-shadow: 0.05rem 0.05rem 2rem rgba(0, 0, 0, .8);
+    }
+    
+    div.orcaInput {
+        width: 63%;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: center;
+        margin-left: 1.5rem;
+    }
+    
+    .orcaInput input {
+        margin-bottom: 0rem;
+        font-family: var(--font-secondary);
+        font-size: 1.3rem;
+        color: var(--verde-Vallence);
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
+        background-color: var(--cor-fundo);
+        border-bottom: .15rem solid var(--verde-Vallence);
+        width: 45rem;
+        outline: none;
+        grid-row: 2;
+    }
+    
     .modaldisplay {
         display: flex;
-        margin-top: 1rem;
+        margin-top: 2.5rem;
         justify-content: space-evenly;
     }
     
@@ -1090,37 +1086,36 @@
         margin-bottom: 0rem;
         font-family: var(--font-secondary);
         font-size: 1.3rem;
-        color: var(--blue-Rumos);
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
-        background-color: rgba(65, 59, 59, .95);
-        border-bottom: 1px solid var(--blue-Rumos);
+        color: var(--verde-Vallence);
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
+        background-color: var(--cor-fundo);
+        border-bottom: .15rem solid var(--verde-Vallence);
         width: 45rem;
         outline: none;
         grid-row: 2;
     }
     
     .modaluser {
-        width: 40%;
+        width: 33%;
         height: 60%;
         background-color: var(--cor-fundo);
         border-radius: .6rem;
         margin: 8rem auto 0 auto;
         box-shadow: 0.05rem 0.05rem 2rem rgba(0, 0, 0, .8);
-        border: .15rem solid rgba(0, 131, 176, .3);
     }
     
     .userinput input {
         margin-bottom: 1rem;
         font-family: var(--font-secondary);
         font-size: 1.3rem;
-        color: var(--blue-Rumos);
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
-        background-color: rgba(65, 59, 59, .95);
-        border-bottom: 1px solid var(--blue-Rumos);
+        color: var(--verde-Vallence);
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid var(--verde-Vallence);
         width: 36rem;
         outline: none;
         margin-top: .8rem;
-        margin-left: 6.5rem;
+        margin-left: 1.5rem;
     }
     
     small.email {
@@ -1133,8 +1128,8 @@
     
     .modaluser small {
         grid-row: 1;
-        margin-left: 6.5rem;
-        color: #b9b8b8;
+        margin-left: 1.5rem;
+        color: var(--azul-Vallence);
         text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
         font-family: var(--font-secondary);
         font-size: 1.3rem;
@@ -1158,9 +1153,9 @@
     
     .orcamentoEdit {
         font-family: var(--font-secondary);
-        font-size: 1rem;
-        color: white;
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
+        font-size: 1.2rem;
+        color: var(--azul-Vallence);
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
         grid-row: 1;
         margin-top: 1rem;
         text-align: initial;
@@ -1195,8 +1190,9 @@
     small.login {
         font-family: var(--font-secondary);
         font-size: 1.2rem;
-        color: white;
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
+        color: var(--verde-Vallence);
+        font-weight: 600;
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
         grid-row: 1;
         grid-column: 1/2;
         margin-top: 1rem;
@@ -1207,8 +1203,9 @@
     small.login2 {
         font-family: var(--font-secondary);
         font-size: 1.2rem;
-        color: white;
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
+        color: var(--verde-Vallence);
+        font-weight: 600;
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 50%);
         grid-row: 1;
         grid-column: 3/4;
         margin-top: 1rem;
@@ -1249,10 +1246,10 @@
         margin-bottom: 1rem;
         font-family: var(--font-secondary);
         font-size: 1.3rem;
-        color: var(--blue-Rumos);
+        color: var(--verde-Vallence);
         text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 80%);
-        background-color: rgba(65, 59, 59, .95);
-        border-bottom: 1px solid var(--blue-Rumos);
+        background-color: transparent;
+        border-bottom: .15rem solid var(--verde-Vallence);
         width: 19.5rem;
         outline: none;
         grid-row: 2;
@@ -1284,11 +1281,10 @@
     .cadastrar {
         width: 35%;
         height: 45%;
-        background-color: var(--cor-fundo);
-        border: .15rem solid rgba(0, 131, 176, .3);
+        background-color: rgba(238, 238, 238, .3);
         border-radius: .6rem;
-        margin: 8rem auto 0 auto;
-        box-shadow: 0.05rem 0.05rem 2rem rgb(0 0 0 / 80%);
+        margin: 13rem auto 0 52rem;
+        box-shadow: 0.05rem 0.05rem 2rem rgb(0 0 0 / 30%);
     }
     
     .modalcadastro {
@@ -1369,7 +1365,7 @@
         font-family: var(--font-action);
         font-weight: 900;
         font-size: 1.3rem;
-        color: var(--blue-Rumos);
+        color: var(--verde-Vallence);
         background-color: transparent;
         text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 91%);
         position: absolute;
