@@ -1304,7 +1304,7 @@
     
     .login3 {
         width: 25%;
-        height: 40%;
+        height: 35%;
         background-color: rgba(65, 59, 59, .05);
         border-radius: .6rem;
         box-shadow: 0.05rem 0.05rem 1rem rgb(100 100 100);
@@ -1353,12 +1353,15 @@
     
     .error_msg {
         font-family: var(--font-action);
-        font-weight: 500;
+        font-weight: 900;
         font-size: 1.3rem;
-        color: red;
+        color: #e24d4d;
         background-color: transparent;
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 91%);
-        text-align: center;
+        text-shadow: 0.08rem 0.08rem 0.08rem rgb(0 0 0 / 80%);
+        position: absolute;
+        top: 4rem;
+        left: 1rem;
+        z-index: 20;
     }
     
     .success_msg {
@@ -1367,7 +1370,7 @@
         font-size: 1.3rem;
         color: var(--verde-Vallence);
         background-color: transparent;
-        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 91%);
+        text-shadow: 0.05rem 0.05rem 0.3rem rgb(0 0 0 / 15%);
         position: absolute;
         top: 4rem;
         left: 1rem;

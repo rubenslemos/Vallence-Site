@@ -7,7 +7,7 @@ const create = require('./CreateTables')
 const edit = require('./edit')
 const login = require('./login')
 const eAdmin = require('./eAdmin')
-
+const email = require('./email')
 route.get('/', (req, res) => res.render("index", { page: 'home' }))
 route.get('/conhecimento', (req, res) => res.render("index", { page: 'conhecimento' }))
 route.get('/clientes', eAdmin.logado, (req, res) => res.render("index", { page: 'clientes' }))
@@ -33,5 +33,6 @@ route.post('/logar', login.login)
 route.get('/logout', login.logout)
 route.get('/listaorcamento/:id', eAdmin.eAdmin, deletar.deletepost)
 route.get('/listaclientes/:id', eAdmin.eAdmin, deletar.deleteuser)
+route.post('/email', email.email)
 
 module.exports = route

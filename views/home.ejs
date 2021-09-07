@@ -11,21 +11,16 @@
         <div class="login3">
             <form action="/logar" method="POST" id="orcamentos" name="orcamentos">
                 <h1 class="tituloLogin">Login</h1>
-                <% if (error_msg) {%>
-                    <p class="error_msg">
-                        <%= error_msg %>
+                <div class="login">
+                    <p class="login">
+                        <small class="logins">Usuário</small>
+                        <input class="logins" type="email" name="email" required>
                     </p>
-                    <% } %>
-                        <div class="login">
-                            <p class="login">
-                                <small class="logins">Usuário</small>
-                                <input class="logins" type="email" name="email" required>
-                            </p>
-                            <p class="login">
-                                <small class="logins">Senha</small>
-                                <input class="logins" type="password" name="Senha" required>
-                            </p>
-                        </div>
+                    <p class="login">
+                        <small class="logins">Senha</small>
+                        <input class="logins" type="password" name="Senha" required>
+                    </p>
+                </div>
             </form>
             <div class="modallogin">
                 <p>

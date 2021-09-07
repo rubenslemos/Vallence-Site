@@ -38,37 +38,46 @@
                 </ul>
             </nav>
         </aside>
-        <% if (success_msg) {%>
-            <p class="success_msg">
-                <%= success_msg %>
+        <% if (error_msg) {%>
+            <p class="error_msg">
+                <%= error_msg %>
             </p>
             <% } %>
-                <%-include(`${page}`)%>
-                    <footer>
-                        <div class="footer-content">
-                            <% if (user == null) { %>
-                                <p></p>
-                                <% } else {%>
-                                    <p class="logado">
-                                        <%= user.usuario %> :
-                                            <%= user.email %>
-                                    </p>
-                                    <% } %>
-                                        <p>
-                                            Copyright &copy; 2021, Vallence Turismo Todos direitos reservados
-                                        </p>
-                                        <div class="social-list">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-github"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-discord"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                                            </ul>
+                <% if (success_msg) {%>
+                    <p class="success_msg">
+                        <%= success_msg %>
+                    </p>
+                    <% } %>
+                        <% if (erros) {%>
+                            <p class="error_msg">
+                                <%= erros %>
+                            </p>
+                            <% } %>
+                                <%-include(`${page}`)%>
+                                    <footer>
+                                        <div class="footer-content">
+                                            <% if (user == null) { %>
+                                                <p></p>
+                                                <% } else {%>
+                                                    <p class="logado">
+                                                        <%= user.usuario %> :
+                                                            <%= user.email %>
+                                                    </p>
+                                                    <% } %>
+                                                        <p>
+                                                            Copyright &copy; 2021, Vallence Turismo Todos direitos reservados
+                                                        </p>
+                                                        <div class="social-list">
+                                                            <ul>
+                                                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                                                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+                                                                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                                                            </ul>
+                                                        </div>
                                         </div>
-                        </div>
-                    </footer>
+                                    </footer>
     </div>
 </body>
 <script src="/script.js"></script>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </html>

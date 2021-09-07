@@ -2,7 +2,7 @@
     <div class="contato-wrapper">
         <div class="contato-right">
             <h1>Contato</h1>
-            <form name="form" id="form" onsubmit="return false">
+            <form action="/email" method="POST" name="form" id="form">
                 <div class="input-group ">
                     <input type="text" class="field" name="nome" id="nome">
                     <label for="nome" class="field-label">
@@ -16,15 +16,30 @@
                     </label>
                 </div>
                 <div class="input-group">
-                    <textarea class="field" nome="mensagem" id="mensagem">
+                    <textarea class="field" name="mensagem" id="mensagem">
 
                     </textarea>
                     <label for="mensagem" class="field-label">
                         Mensagem
                     </label>
                 </div>
-                <button type="submit" class="btn" nome="button" id="button">Enviar</button>
-                <div><img class="imgConhecimento" src="/img/conhecimentos.png"></div>
+                <% if (error_msg) {%>
+                    <p class="error_msg">
+                        <%= error_msg %>
+                    </p>
+                    <% } %>
+                        <% if (erros) {%>
+                            <p class="error_msg">
+                                <%= erros %>
+                            </p>
+                            <% } %>
+                                <% if (success_msg) {%>
+                                    <p class="success_msg">
+                                        <%= success_msg %>
+                                    </p>
+                                    <% } %>
+                                        <button type="submit" class="btn" nome="button" id="button">Enviar</button>
+                                        <div><img class="imgConhecimento" src="/img/conhecimentos.png"></div>
             </form>
         </div>
     </div>
