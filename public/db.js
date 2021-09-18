@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize('vallence', 'root', '', {
     dialect: 'mysql',
-    host: 'localhost'
+    host: '192.168.0.133',
+    port: 3307
 
 })
 sequelize.authenticate().then(function() {

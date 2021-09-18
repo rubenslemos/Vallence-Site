@@ -22,12 +22,11 @@ app.use((req, res, next) => {
     res.locals.moment = moment;
     next();
 });
-const log = function(request, response, next) {
-    console.log(`${new Date()}: ${request.protocol}://${request.get('host')}${request.originalUrl}`);
-    console.log(request.body); // make sure JSON middleware is loaded before this line
-    next();
-}
-app.use(log);
+// const log = function(request, response, next) {
+//     console.log(`${new Date()}: ${request.protocol}://${request.get('host')}${request.originalUrl}`);
+//     next();
+// }
+// app.use(log);
 
 app.set('view engine', 'ejs');
 app.use(http.static("public"));
